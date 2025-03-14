@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="320px"
+   height="100px"
+   viewBox="0 0 220 110"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:lockguides="false"
+     units="mm"
+     inkscape:zoom="1.5804578"
+     inkscape:cx="264.16397"
+     inkscape:cy="157.23292"
+     inkscape:window-width="1850"
+     inkscape:window-height="1016"
+     inkscape:window-x="70"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g2026"
+     inkscape:snap-global="false" />
+  <defs
+     id="defs2">
+    <rect
+       x="-55.396462"
+       y="-90.660072"
+       width="1191.475"
+       height="613.27713"
+       id="rect34655" />
+    <rect
+       x="40.417862"
+       y="74.398041"
+       width="437.99639"
+       height="157.05223"
+       id="rect24703" />
+    <rect
+       x="72.924948"
+       y="105.06682"
+       width="181.03735"
+       height="56.86911"
+       id="rect9623" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1395">
+      <g
+         inkscape:label="Clip"
+         id="use1397">
+        <ellipse
+           style="fill:#241c1c;stroke-width:0.753364"
+           id="ellipse1399"
+           cx="303.79672"
+           cy="-33.316864"
+           transform="rotate(11.389135)"
+           rx="30.659706"
+           ry="30.659779" />
+      </g>
+    </clipPath>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Capa 2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2026"
+       style="stroke-width:1.00013;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(2.2199521,0,0,2.2199521,-123.73152,-52.57236)">
+      <g
+         id="g2021"
+         style="stroke-width:1.00013;stroke-miterlimit:4;stroke-dasharray:none;fill:#da993e;fill-opacity:1">
+        <g
+           id="g2017"
+           style="stroke-width:1.00013;stroke-miterlimit:4;stroke-dasharray:none;fill:#da993e;fill-opacity:1">
+          <path
+             id="path67241"
+             style="fill:#da993e;fill-opacity:1;stroke-width:3.78;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+             d="m 205.16797,104.10156 a 80.264712,80.264712 0 0 0 -80.26563,80.26563 80.264712,80.264712 0 0 0 80.26563,80.26367 80.264712,80.264712 0 0 0 80.26562,-80.26367 80.264712,80.264712 0 0 0 -80.26562,-80.26563 z m 0,40.52539 a 39.739292,39.739292 0 0 1 39.74023,39.74024 39.739292,39.739292 0 0 1 -39.74023,39.73828 39.739292,39.739292 0 0 1 -39.74024,-39.73828 39.739292,39.739292 0 0 1 39.74024,-39.74024 z"
+             transform="scale(0.26458334)" />
+        </g>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       transform="matrix(1.3882197,0,0,1.8922482,-55.068959,-189.39218)"
+       id="text9621"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect9623);fill:#10375c;fill-opacity:1;stroke:none"><tspan
+         x="72.925781"
+         y="145.1097"
+         id="tspan878"><tspan
+           style="font-stretch:condensed;font-family:Impact;-inkscape-font-specification:'Impact, Condensed'"
+           id="tspan876">FreeTable</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458334)"
+       id="text24701"
+       style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;white-space:pre;shape-inside:url(#rect24703)" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458334)"
+       id="text34653"
+       style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;white-space:pre;shape-inside:url(#rect34655)" />
+  </g>
+</svg>

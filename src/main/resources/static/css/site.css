@@ -1,0 +1,148 @@
+@import url(initializer.css);
+
+/*.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}*/
+
+body {
+    margin: 0;
+}
+
+.header-principal {
+    width: 100%;
+    height: 120px;
+}
+
+nav {   
+    display: flex;
+    align-items: center;  
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+}
+
+.nav-form {
+    flex: 3;
+}
+
+.nav-logo,
+.nav-btt,
+.foo > div {
+    flex: 1;
+}
+
+.nav-btt {
+    display: flex;
+    justify-content: end;
+    align-content: center;
+}
+
+
+.btt-1 {
+    padding: 10px;
+    background-color: var(--main-color);
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    margin: 5px;
+}
+
+.btt-2 {
+    padding: 8px 15px;
+    background-color: var(--second-color);
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    margin: 5px;
+}
+
+.btt-3 {
+    padding: 10px;
+    color: #4a4a4a;
+    border-radius: 0.5rem;
+    margin: 5px;
+}
+
+
+.form-query > * {
+    display: inline-flex;
+}
+
+.form-query input {
+    margin: 0;
+    border: 0;
+    padding: 10px;
+}
+
+.form-query input[type="submit"] {
+    border-radius: 20px;
+    background-color: var(--main-color);
+    color: #FFFFFF;
+    font-weight: bold;   
+}
+
+.form-query input:focus {
+    outline: none;  
+}
+
+#inp-border {
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: var(--second-color);
+}
+
+.form-query > div {
+    border: 1px solid var(--second-color);
+    border-radius: 25px 0 0 25px;
+    padding: 3px;
+}
+
+.form-rest input,
+.form-res input {
+    flex: 1 1 auto;
+}
+
+.form-query input:first-of-type {
+    border-radius: 20px 0 0 20px;
+}
+
+.form-query .form-rest {
+    border-radius: 20px 20px 20px 20px;
+}
+
+.container {
+    min-height: calc(100vh - 310px);
+}
+
+footer,
+.container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.foo {
+    height: 190px;
+    background-color: var(--main-color);
+    padding: 20px;
+    display: flex;
+}
+
+.foo * {
+    color: #FFFFFF;
+}
+
+.foo h1,
+.foo foo-info{
+    text-align: center;
+}
+
+.mh-auto {
+    margin-left: auto;
+    margin-right: auto;
+}

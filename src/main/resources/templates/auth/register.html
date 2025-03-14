@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layouts/layout :: head(title='Registro', css='userRegister')}">
+    <title>Registro</title>
+</head>
+<body>
+    <header th:replace="~{layouts/layout :: cabecero}"></header>
+    <!-- Template -->
+    <div class="container">
+        <div class="contenido">
+            <h2>Resgistro</h2>
+
+            <!-- <form class="form-registre-client">
+                <input type="text" name="numberphone" value="" placeholder="Número de teléfono" />
+                <input type="email" name="email" value="" placeholder="Email" />
+                <input type="text" name="names" value="" placeholder="Nobre y apellidos"/>
+                <input type="text" name="pssw" value="" placeholder="Contraseña" />
+                <input type="text" name="psswrepeat" value="" placeholder="Confirmar contraseña" />
+                <input type="submit" asp-controller="" asp-action="" value="Registrarse"/>
+            </form> -->
+    
+            <h2>Registro de Usuario</h2>
+            <form th:action="@{/auth/register}" method="post" th:object="${usuario}">
+                <input type="text" th:field="*{username}" placeholder="Usuario" required>
+                <input type="password" th:field="*{password}" placeholder="Contraseña" required>
+                <input type="hidden" name="role" value="CLIENT">
+                <button type="submit">Registrar</button>
+            </form>
+
+            <h3>Representas un restaurante?</h3>
+    
+            <p>
+                Si tienes un restaurante y quieres disfrutar de los beneficios que FreeTable tiene para ofreserte.
+                Crea una cuenta como <a href="#">empresa aquí</a>.
+            </p>
+        </div>
+
+    </div>
+    <!-- Template -->
+    <footer th:replace="~{layouts/layout :: footer}"></footer>
+</body>
+</html>

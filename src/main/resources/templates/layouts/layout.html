@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title, css)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.svg}">
+    <th:block th:if="${css != null and css != ''}">
+        <link rel="stylesheet" th:href="@{/css/{file}.css(file=${css})}">
+    </th:block>
+    <link rel="stylesheet" th:href="@{/css/site.css}">
+    <title th:text="${title}"></title>
+</head>
+<body>
+    <header th:fragment="cabecero" class="header-principal">
+        <nav class="nav">
+            <div class="nav-logo">
+                <a th:href="@{/home}" ><img th:src="@{/img/logo.svg}" alt="Freetable logo" /></a>
+            </div>
+            <div class="nav-form">
+                <form th:if="${consultar}" action="" method="post" class="form-query">
+                    <div class="form-res">
+                        <input type="text" name="fecha" placeholder="10/02/2024" value="" />
+                        <input type="text" id="inp-border" name="hora" placeholder="20:30" value="" />
+                        <input type="text" name="personas" placeholder="2 Personas" value="" />
+                    </div>
+                    <div class="form-rest">
+                        <input type="text" name="rest" placeholder="Restaurante" value="" />
+                        <input type="submit" name="buscar" value="Buscar" />
+                    </div>
+                </form>
+            </div>
+            <div class="nav-btt">
+                <a th:href="@{/auth/register}" class="btt-3" >Registrarse</a>
+                <a th:href="@{/auth/login}" class="btt-1" >Iniciar Sesión</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <footer th:fragment="footer" class="foo">
+        <div class="foo-acount">
+            <h3>¿Tines un resturante?</h3>
+            <p>
+                Estamos interesados en ampliar nuestro catálogo. Si eres dueño de un restaurante y quieres 
+                trabajar con nosotros, el primer paso es crear una cuenta de empresa. Què esperas?
+            </p>
+            <a href="#" class="btt-2 mh-auto">Registrarse</a>
+        </div>
+        <div class="foo-social">
+            <h3>Síguenos en nuestras redes sociales</h3>
+            <nav class="nav-social">
+                <a href="#"><img th:src="@{/img/social/instagram.svg}" alt="Alternate Text" /></a>
+                <a href="#"><img th:src="@{/img/social/twiter.svg}" alt="Alternate Text" /></a>
+                <a href="#"><img th:src="@{/img/social/facebook.svg}" alt="Alternate Text" /></a>
+            </nav>
+            <p class="foo-info" >
+                Para más información llamar al 624527327 <br />
+                o enviar un correo a freetable.atencion@gmail.com
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

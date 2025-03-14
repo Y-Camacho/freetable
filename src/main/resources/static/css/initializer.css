@@ -1,0 +1,21 @@
+﻿:root {
+    --main-font: sans-serif;
+    --font-size: 16px;
+    --main-color: #DA993E;
+    --second-color: #10375C;
+    --main-modal-color: rgba(247, 222, 30, 0.85);
+    --second-modal-color: rgba(34, 34, 34, 0.85);
+    --container-width: 1200px;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: var(--font-size);
+    font-family: var(--main-font);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
