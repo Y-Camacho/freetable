@@ -43,8 +43,11 @@ public class SecurityConfig {
             )
             .logout(logout ->
                 logout
-                    .logoutUrl("/auth/logout")  // URL de logout
-                    .permitAll()  // Permite acceso a logout
+                    .logoutUrl("/auth/logout")  // URL para hacer logout
+                    .logoutSuccessUrl("/auth/login?logout")  // Página de éxito después del logout
+                    .invalidateHttpSession(true)  // Invalida la sesión HTTP
+                    .clearAuthentication(true)  // Borra la autenticación
+                    .permitAll()  // Permitido para todos
             );
 
         return http.build();

@@ -7,6 +7,15 @@
     <!-- Template -->
     <div class="container">
         <p>hola</p>
+        <div th:if="${#authentication.name == 'anonymousUser'}">
+            <h2>Hola, visitante. No estás autenticado.</h2>
+            <p><a href="/login">Inicia sesión</a> para acceder a contenido exclusivo.</p>
+        </div>
+    
+        <div th:if="${#authentication.name != 'anonymousUser'}">
+            <h2>Bienvenido, <span th:text="${#authentication.name}"></span>!</h2>
+            <p>Este es un contenido exclusivo para usuarios autenticados.</p>
+        </div>
 
     </div>
     <!-- Template -->

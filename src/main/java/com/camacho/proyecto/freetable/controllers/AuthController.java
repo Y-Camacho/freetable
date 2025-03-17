@@ -40,7 +40,7 @@ public class AuthController {
     @GetMapping("/register")
     public String showRegisterForm(Model model) {
         model.addAttribute("usuario", new Usuario());
-        return "/auth/register";
+        return "auth/register";
     }
 
     @PostMapping("/register")
@@ -51,8 +51,8 @@ public class AuthController {
     }
 
     @GetMapping("/login")
-    public String login(){
-        return "/auth/login";
+    public String login(@RequestParam(value = "logout", required = false) String logout){
+        return "auth/login";
     }
 
     @PostMapping("/login")
@@ -82,10 +82,10 @@ public class AuthController {
                         return "redirect:/home";
                 }
             } else {
-                redirectAttributes.addFlashAttribute("error", "Contraseña incorrecta");
+                return "redirect:/auth/login?error";
             }
         } else {
-            redirectAttributes.addFlashAttribute("error", "Usuario no encontrado");
+            return "redirect:/auth/login?error";
         }
     
         return "redirect:/auth/login"; // Redirige con mensaje de error

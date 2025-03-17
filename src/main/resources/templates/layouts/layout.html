@@ -29,9 +29,13 @@
                     </div>
                 </form>
             </div>
-            <div class="nav-btt">
+            <div class="nav-btt" th:if="${#authentication.name == 'anonymousUser'}">
                 <a th:href="@{/auth/register}" class="btt-3" >Registrarse</a>
                 <a th:href="@{/auth/login}" class="btt-1" >Iniciar Sesión</a>
+            </div>
+
+            <div class="nav-btt" th:if="${#authentication.name != 'anonymousUser'}">
+                <a th:href="@{/auth/logout}" class="btt-3">Logout</a>
             </div>
         </nav>
     </header>
