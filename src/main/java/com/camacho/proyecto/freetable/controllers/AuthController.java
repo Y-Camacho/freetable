@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.camacho.proyecto.freetable.models.Usuario;
 import com.camacho.proyecto.freetable.models.Usuario.Rol;
@@ -55,7 +56,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestParam String username, @RequestParam String password, Model model) {
+    public String login(@RequestParam String username, @RequestParam String password, Model model, RedirectAttributes redirectAttributes) {
         Optional<Usuario> usuarioOpt = usuarioRepository.findByUsername(username);
 
         if (usuarioOpt.isPresent()) {
@@ -81,13 +82,13 @@ public class AuthController {
                         return "redirect:/home";
                 }
             } else {
-                model.addAttribute("error", "Contraseña incorrecta");
+                redirectAttributes.addFlashAttribute("error", "Contraseña incorrecta");
             }
         } else {
-            model.addAttribute("error", "Usuario no encontrado");
+            redirectAttributes.addFlashAttribute("error", "Usuario no encontrado");
         }
-
-        return "/auth/login"; // Volver a la vista de login con mensaje de error
+    
+        return "redirect:/auth/login"; // Redirige con mensaje de error
     }
 
 
