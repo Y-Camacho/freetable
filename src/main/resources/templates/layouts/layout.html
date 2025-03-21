@@ -35,7 +35,9 @@
             </div>
 
             <div class="nav-btt" th:if="${#authentication.name != 'anonymousUser'}">
-                <a th:href="@{/auth/logout}" class="btt-3">Logout</a>
+                <form th:action="@{/logout}" method="post">
+                    <input type="submit" value="Logout" class="btt-3">
+                </form>
             </div>
         </nav>
     </header>
