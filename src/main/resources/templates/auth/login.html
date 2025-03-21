@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{layouts/layout :: head(title='Login', css=null)}">
-    <title>Login</title>
+<head th:replace="~{layouts/layout :: head(title='Login', css='userLogin')}">
 </head>
 <body>
     <header th:replace="~{layouts/layout :: cabecero}"></header>
     <!-- Template -->
     <div class="container">
-        <h2>Iniciar Sesión</h2>
-        <form th:action="@{/auth/login}" method="post">
-            <input type="text" name="username" placeholder="Usuario" required>
-            <input type="password" name="password" placeholder="Contraseña" required>
-            <button type="submit">Ingresar</button>
-        </form>
-        <p th:if="${param.error}">Credenciales incorrectas</p>
-        <p th:if="${param.logout}">Has cerrado sesión con éxito</p>
+        <main>
+            <h2>Iniciar Sesión</h2>
+            <form th:action="@{/auth/login}" method="post" class="form-login row">
+                <input type="text" name="username" placeholder="Usuario" class="form-control" required>
+                <input type="password" name="password" placeholder="Contraseña" class="form-control" required>
+                <button type="submit" class="btn col-md-4 btt-1" >Ingresar</button>
+            </form>
+            <p th:if="${param.error}" class="alert alert-danger"><strong>Credenciales incorrectas</strong></p>
+            <p th:if="${param.logout}" class="alert alert-success"><strong>Has cerrado sesión con éxito</strong></p>
+        </main>
     </div>
     <!-- Template -->
     <footer th:replace="~{layouts/layout :: footer}"></footer>
