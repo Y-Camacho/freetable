@@ -37,7 +37,7 @@
 
             <div class="nav-btt" th:if="${#authentication.name != 'anonymousUser'}">
                 <form th:action="@{/logout}" method="post">
-                    <input type="submit" value="Logout" class="btt-3">
+                    <input type="submit" value="Logout" class="btn btt-3">
                 </form>
             </div>
         </nav>
@@ -51,14 +51,14 @@
                 Estamos interesados en ampliar nuestro catálogo. Si eres dueño de un restaurante y quieres 
                 trabajar con nosotros, el primer paso es crear una cuenta de empresa. Què esperas?
             </p>
-            <a href="#" class="btt-2 mh-auto">Registrarse</a>
+            <a href="#" class="btt-2">Registrarse</a>
         </div>
-        <div class="foo-social">
+        <div class="foo-social row">
             <h3>Síguenos en nuestras redes sociales</h3>
-            <nav class="nav-social">
-                <a href="#"><img th:src="@{/img/social/instagram.svg}" alt="Alternate Text" /></a>
-                <a href="#"><img th:src="@{/img/social/twiter.svg}" alt="Alternate Text" /></a>
-                <a href="#"><img th:src="@{/img/social/facebook.svg}" alt="Alternate Text" /></a>
+            <nav class="nav-social ">
+                <a href="#"><img class="img-social" th:src="@{/img/social/instagram.svg}" alt="Alternate Text" /></a>
+                <a href="#"><img class="img-social" th:src="@{/img/social/twiter.svg}" alt="Alternate Text" /></a>
+                <a href="#"><img class="img-social" th:src="@{/img/social/facebook.svg}" alt="Alternate Text" /></a>
             </nav>
             <p class="foo-info" >
                 Para más información llamar al 624527327 <br />

@@ -17,14 +17,14 @@
             </form> -->
     
             <h2>Registro de Usuario</h2>
-            <form th:action="@{/auth/register}" method="post" th:object="${usuario}">
+            <form th:action="@{/auth/register}" method="post" th:object="${usuario}" class="form-registre row" >
                 <input type="text" th:field="*{username}" placeholder="Usuario" class="form-control" required>
                 <input type="password" th:field="*{password}" placeholder="Contraseña" class="form-control" required>
                 <input type="hidden" name="role" value="CLIENT">
-                <button type="submit">Registrar</button>
+                <button type="submit" class="btn btt-2 col-md-4">Registrar</button>
             </form>
 
-            <h3>Representas un restaurante?</h3>
+            <h4>Representas un restaurante?</h4>
             <p>
                 Si tienes un restaurante y quieres disfrutar de los beneficios que FreeTable tiene para ofreserte.
                 Crea una cuenta como <a href="#">empresa aquí</a>.
