@@ -1,0 +1,13 @@
+
+main {
+    width: 500px;
+}
+
+.container {
+    justify-items: center;
+}
+
+.form-login {
+    row-gap: 0.5rem;
+    justify-content: center;
+}

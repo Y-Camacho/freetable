@@ -3,8 +3,7 @@
 .contenido {
     width: 500px;
     margin: 0 auto;
-    padding: 1rem;
-
+    row-gap: 0.5rem;
 }
 
 .form-registre-client {

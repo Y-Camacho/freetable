@@ -51,6 +51,10 @@ nav {
     margin: 5px;
 }
 
+.btt-1:hover {
+    background-color: #bb9112;
+}
+
 .btt-2 {
     padding: 8px 15px;
     background-color: var(--second-color);
