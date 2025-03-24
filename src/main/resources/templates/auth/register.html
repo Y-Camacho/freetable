@@ -20,6 +20,7 @@
             <form th:action="@{/auth/register}" method="post" th:object="${usuario}" class="form-registre row" >
                 <input type="text" th:field="*{username}" placeholder="Usuario" class="form-control" required>
                 <input type="password" th:field="*{password}" placeholder="Contraseña" class="form-control" required>
+                <p th:if="${error}" class="alert alert-danger"><strong th:text="${error}"></strong></p>
                 <input type="hidden" name="role" value="CLIENT">
                 <button type="submit" class="btn btt-2 col-md-4">Registrar</button>
             </form>

@@ -44,7 +44,12 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public String registerUser(@ModelAttribute Usuario usuario, @RequestParam("role") String role) {
+    public String registerUser(@ModelAttribute Usuario usuario, @RequestParam("role") String role, Model model) {
+        if (usuarioRepository.findByUsername(usuario.getUsername()).isPresent()) {
+            model.addAttribute("error", "Ya existe un usuario con este correo.");
+            return "auth/register"; // Redirigir a la página de registro con un mensaje de error
+        }
+
         usuario.setRole(Rol.valueOf(role.toUpperCase())); // Convertir String a Enum
         userService.saveUser(usuario);
         return "redirect:/auth/login";
