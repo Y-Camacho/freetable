@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.camacho.proyecto.freetable.models.Cliente;
 import com.camacho.proyecto.freetable.models.Usuario;
 import com.camacho.proyecto.freetable.models.Usuario.Rol;
 import com.camacho.proyecto.freetable.repositories.UsuarioRepository;
@@ -39,19 +40,24 @@ public class AuthController {
 
     @GetMapping("/register")
     public String showRegisterForm(Model model) {
-        model.addAttribute("usuario", new Usuario());
+        model.addAttribute("cliente", new Cliente());
         return "auth/register";
     }
 
     @PostMapping("/register")
-    public String registerUser(@ModelAttribute Usuario usuario, @RequestParam("role") String role, Model model) {
-        if (usuarioRepository.findByUsername(usuario.getUsername()).isPresent()) {
+    public String registerUser(@ModelAttribute Cliente cliente, @RequestParam("role") String role, @RequestParam("repassw") String repassw, Model model) {
+        if (usuarioRepository.findByUsername(cliente.getUsername()).isPresent()) {
             model.addAttribute("error", "Ya existe un usuario con este correo.");
             return "auth/register"; // Redirigir a la página de registro con un mensaje de error
         }
 
-        usuario.setRole(Rol.valueOf(role.toUpperCase())); // Convertir String a Enum
-        userService.saveUser(usuario);
+        if (!cliente.getPassword().equals(repassw)) {
+            model.addAttribute("error", "Las contraseñas no coinciden.");
+            return "auth/register"; // Redirigir a la página de registro con un mensaje de error
+        }
+
+        cliente.setRole(Rol.valueOf(role.toUpperCase())); // Convertir String a Enum
+        userService.saveUser(cliente);
         return "redirect:/auth/login";
     }
 

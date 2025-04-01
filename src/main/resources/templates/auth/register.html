@@ -17,9 +17,12 @@
             </form> -->
     
             <h2>Registro de Usuario</h2>
-            <form th:action="@{/auth/register}" method="post" th:object="${usuario}" class="form-registre row" >
+            <form th:action="@{/auth/register}" method="post" th:object="${cliente}" class="form-registre row" >
                 <input type="text" th:field="*{username}" placeholder="Usuario" class="form-control" required>
+                <input type="text" th:field="*{name}" placeholder="Nombre y apellidos" class="form-control" required>
+                <input type="text" th:field="*{phone}" placeholder="Numero de teléfono" class="form-control" required>
                 <input type="password" th:field="*{password}" placeholder="Contraseña" class="form-control" required>
+                <input type="password" placeholder="Repite la contraseña" name="repassw" class="form-control" required>
                 <p th:if="${error}" class="alert alert-danger"><strong th:text="${error}"></strong></p>
                 <input type="hidden" name="role" value="CLIENT">
                 <button type="submit" class="btn btt-2 col-md-4">Registrar</button>
