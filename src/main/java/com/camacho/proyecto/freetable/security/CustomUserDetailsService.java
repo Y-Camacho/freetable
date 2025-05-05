@@ -24,7 +24,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         return User.withUsername(usuario.getUsername())
                 .password(usuario.getPassword())
                 .roles(usuario.getRole().name()) // Convertir Enum a String
-                .build();
+                .build(); 
     }
     
     public void saveUser(Usuario usuario) {
